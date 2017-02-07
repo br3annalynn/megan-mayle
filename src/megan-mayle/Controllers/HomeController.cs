@@ -13,17 +13,13 @@ namespace megan_mayle.Controllers
             return View();
         }
 
-        public IActionResult About()
+        public IActionResult Services()
         {
-            ViewData["Message"] = "Your application description page.";
-
             return View();
         }
 
-        public IActionResult Contact()
+        public IActionResult Portfolio()
         {
-            ViewData["Message"] = "Your contact page.";
-
             return View();
         }
 

@@ -1,0 +1,43 @@
+﻿/*128D93 dark teal*/
+/*55B2B6 light teal*/
+/*020202 black*/
+/*B3B3B3 dark gray*/
+/*DBDBDB light gray*/
+/*9E75C9 light purple*/
+/*5C3584 dark purple*/
+
+.dark-teal {
+    color: #128D93;
+}
+
+.light-teal {
+    color: #55B2B6;
+}
+
+.black {
+    color: #020202;
+}
+
+.dark-gray {
+    color: #B3B3B3;
+}
+
+.light-gray {
+    color: #DBDBDB;
+}
+
+.dark-purple {
+    color: #5C3584;
+}
+
+.light-purple {
+    color: #9E75C9;
+}
+
+.very-light-purple {
+    color: #e1aeeb;
+}
+
+.float-left {
+    float: left;
+}
