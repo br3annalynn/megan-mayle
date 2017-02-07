@@ -8,12 +8,6 @@
     padding-right: 15px;
 }
 
-input,
-select,
-textarea {
-    max-width: 280px;
-}
-
 .contact-bar {
     position: fixed;
     width: 20%;
@@ -67,6 +61,11 @@ textarea {
     margin-left: 240px;
 }
 
+.body-content .content-admin {
+    margin-top: 180px;
+    margin-bottom: 100px;
+}
+
 footer {
     background-color: #5C3584;
     color: white;
@@ -76,4 +75,5 @@ footer {
     width: 101%;
     margin: 0 -35px;
     padding: 20px 0 20px 262px;
+    z-index: 2;
 }

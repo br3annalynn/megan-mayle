@@ -41,3 +41,19 @@
     margin-left: -15px;
     margin-top: 20px;
 }
+
+.btn {
+    padding: 10px 39px;
+    border-radius: 8px;
+    text-transform: uppercase;
+}
+
+.btn-success {
+    background-color: #9E75C9;
+    border-color: #5C3584;
+}
+
+.btn-success:hover {
+    background-color: #e1aeeb;
+    border-color: #5C3584;
+}

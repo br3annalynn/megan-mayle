@@ -1,0 +1,17 @@
+@using megan_mayle.ViewModels
+@model megan_mayle.ViewModels.Post
+@{
+    ViewBag.Title = "Delete";
+    Layout = "_LayoutAdmin";
+}
+@using (Html.BeginForm("PostDelete", "Admin", FormMethod.Post, new { role = "form" }))
+{
+    <input type="hidden" id="Id" name="Id" value="@Model.Id">
+    <h3 class="text-danger">Time out! Are you sure you want to delete this post?</h3>
+    <h4 class="bold">@Model.Title</h4>
+    <div  class="text-muted">@Model.Excerpt</div>
+    <div class="form-group text-right">
+        <button type="submit" class="btn btn-danger">Delete</button>
+    </div>
+}
+

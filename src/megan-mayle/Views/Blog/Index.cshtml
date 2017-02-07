@@ -1,0 +1,44 @@
+@model IList<megan_mayle.ViewModels.PostDisplay>
+<div class="blog">
+    <header>
+        <section class="blue-section">
+            <div class="container text-center">
+                <h1 class="contact-bottom">From the <span class="text-muted bold">Players</span></h1>
+            </div>
+        </section>
+    </header>
+    <section>
+        <div class="container">
+            <div class="section-heading">Team BlogController</div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="post-content">
+                        <div class="post-container">
+                            @foreach (var item in Model)
+                            {
+                                <article>
+                                    <h2>
+                                        <a class="section-sub-heading" href="/blog/post/@item.PostSlug">@item.PostTitle</a>
+                                    </h2>
+                                    <div class="light-gray">
+                                        <span class="author_name">@item.PostDatePosted.ToString("MMM dd, yyyy")</span>
+                                        <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                                        <span class="author_name">@item.AuthorName</span>
+                                    </div>
+                                    @if (!string.IsNullOrEmpty(item.PostExcerpt))
+                                    {
+                                        <p>@item.PostExcerpt<a class="text-muted"  href="/blog/post/@item.PostSlug">See more...</a></p>
+                                    }
+                                    else
+                                    {
+                                        <p>@item.Markdown<a class="text-muted"  href="/blog/post/@item.PostSlug">See more...</a></p>
+                                    }
+                                </article>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
