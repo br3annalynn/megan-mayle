@@ -17,7 +17,7 @@
 </head>
 <body>
 
-<div class="navbar navbar-inverse navbar-fixed-top">
+<div class="navbar navbar-inverse navbar-admin navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -26,7 +26,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-
+            <div><a asp-controller="Home" asp-action="Index" class="navbar-brand">Megan Mayle</a></div>
             <div class="header">Admin Section</div>
         </div>
         <div class="navbar-collapse collapse">
@@ -38,13 +38,13 @@
         </div>
     </div>
 </div>
-<div class="container body-content">
+<div class="container content-admin body-content">
     @RenderBody()
-    <footer>
-        <p>&copy; Megan Mayle 2017</p>
-    </footer>
+   
 </div>
-
+<footer>
+    <p>&copy; Megan Mayle 2017</p>
+</footer>
 <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
         asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
         asp-fallback-test="window.jQuery">

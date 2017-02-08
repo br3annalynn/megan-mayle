@@ -19,7 +19,7 @@
 
 @Html.Partial("_ContactBar")
 <div class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
+    <div class="">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                 <span class="sr-only">Toggle navigation</span>
@@ -39,12 +39,12 @@
         </div>
     </div>
 </div>
-<div class="container body-content">
+<div class="body-content">
     @RenderBody()
-    <footer>
-        <p>&copy; Megan Mayle 2017</p>
-    </footer>
 </div>
+<footer>
+    <span>&copy; Megan Mayle 2017</span>
+</footer>
 
 <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
         asp-fallback-src="~/lib/jquery/dist/jquery.min.js"

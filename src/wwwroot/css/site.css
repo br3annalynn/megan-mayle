@@ -1,5 +1,4 @@
 ﻿body {
-/*    padding-top: 50px;*/
     padding-bottom: 20px;
 }
 
@@ -14,6 +13,7 @@
     max-width: 240px;
     height: 100%;
     left: 10px;
+    top: 0;
     background-color: #DBDBDB;
     z-index: 2000;
 }
@@ -34,7 +34,7 @@
 }
 
 .contact-bar .content {
-    padding: 30px;
+    padding: 25px;
     font-size: 14px;
 }
 
@@ -46,9 +46,8 @@
 
 .contact-bar .icon {
     float: left;
-    font-size: 2em;
-    margin-top: 10px;
-    margin-right: 20px;
+    font-size: 1.5em;
+    margin-right: 10px;
 }
 
 .contact-bar hr {
@@ -57,23 +56,27 @@
 }
 
 .body-content .content {
-    margin-top: 180px;
-    margin-left: 240px;
+    margin-top: 200px;
+    margin-left: 23%;
 }
 
-.body-content .content-admin {
+.body-content.content-admin {
     margin-top: 180px;
     margin-bottom: 100px;
 }
 
-footer {
-    background-color: #5C3584;
-    color: white;
-    font-size: 14px;
-    position: fixed;
-    bottom: 0;
-    width: 101%;
-    margin: 0 -35px;
-    padding: 20px 0 20px 262px;
-    z-index: 2;
+
+.content-header {
+    text-align: center;
+    text-transform: uppercase;
+    color: #5c3584;
+    margin-bottom: 0;
 }
+
+.content-sub-header {
+    text-align: center;
+    color: #020202;
+    margin-top: 0;
+}
+
+
