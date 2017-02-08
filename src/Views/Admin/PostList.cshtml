@@ -1,7 +1,7 @@
 @model IList<megan_mayle.ViewModels.PostDisplay>
 
 @{
-    ViewBag.Title = "BlogController";
+    ViewBag.Title = "Blog";
     Layout = "_LayoutAdmin";
 }
 <div class="content-admin">
@@ -12,15 +12,15 @@
         <tr>
             <th>Title</th>
             <th>Posted</th>
-            <th>Author</th>s
+            <th>Author</th>
         </tr>
 
         @foreach (var item in @Model)
         {
             <tr>
-                <td><a asp-action="PostEdit" asp-controller="Admin" asp-route-id="@item.PostId">@item.PostTitle</a></td>
-                <td>@item.PostDatePosted.ToString("MMM dd, yyyy")</td>
-                <td>@item.AuthorName</td>
+                <td><a asp-action="PostEdit" asp-controller="Admin" asp-route-id="@item.Id">@item.Title</a></td>
+                <td>@item.DatePosted.ToString("MMM dd, yyyy")</td>
+                <td>Megan Mayle</td>
             </tr>
         }
     </table>

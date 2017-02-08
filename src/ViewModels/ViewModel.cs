@@ -11,19 +11,13 @@ namespace megan_mayle.ViewModels
 
     public class PostDisplay
     {
-        public int PostId { get; set; }
-        public string PostTitle { get; set; }
-        public string PostBody { get; set; }
-        public string PostExcerpt { get; set; }
-        public string PostImageUrl { get; set; }
-        public string PostSlug { get; set; }
-        public DateTime PostDatePosted { get; set; }
-        public int AuthorId { get; set; }
-        public string AuthorName { get; set; }
-        public string AuthorTwitter { get; set; }
-        public string AuthorUrl { get; set; }
-        public string AuthorGitHub { get; set; }
-        public string AuthorLinkedIn { get; set; }
+        public int Id { get; set; }
+        public string Title { get; set; }
+        public string Body { get; set; }
+        public string Excerpt { get; set; }
+        public string ImageUrl { get; set; }
+        public string Slug { get; set; }
+        public DateTime DatePosted { get; set; }
         public string Markdown { get; set; }
     }
 

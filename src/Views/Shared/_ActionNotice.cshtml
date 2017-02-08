@@ -1,0 +1,13 @@
+﻿@{
+    var diplay = (TempData["Message"] != null) ? "" : "hide";
+    var message = TempData["Message"] ?? "";
+    var type = TempData["MessageType"] ?? "alert-info";
+    var strong = TempData["MessageStrong"] ?? "Info:";
+}
+
+<div class="well-sm action-notice @diplay">
+    <div class="alert @type action-notice__alert" style="margin-bottom:0px;">
+        <button type="button" class="close action-notice__alert__close" data-dismiss="alert">×</button>
+        <strong class="action-notice__alert__icon">@Html.Raw(strong)</strong> @message
+    </div>
+</div>

@@ -20,7 +20,7 @@ namespace megan_mayle.Controllers
             }
             foreach (var post in posts)
             {
-                post.Markdown = CommonMark.CommonMarkConverter.Convert(post.PostBody);
+                post.Markdown = CommonMark.CommonMarkConverter.Convert(post.Body);
             }
             return View(posts);
         }
@@ -33,7 +33,7 @@ namespace megan_mayle.Controllers
             {
                 post = connection.Query<PostDisplay>(Constants.PostQuery, new { slug = id }).ToList().FirstOrDefault();
             }
-            post.Markdown = CommonMark.CommonMarkConverter.Convert(post.PostBody);
+            post.Markdown = CommonMark.CommonMarkConverter.Convert(post.Body);
             return View("Post", post);
         }
     }

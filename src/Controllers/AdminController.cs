@@ -31,7 +31,7 @@ namespace megan_mayle.Controllers
             }
             foreach (var post in posts)
             {
-                post.Markdown = CommonMark.CommonMarkConverter.Convert(post.PostBody);
+                post.Markdown = CommonMark.CommonMarkConverter.Convert(post.Body);
             }
             return View(posts);
         }

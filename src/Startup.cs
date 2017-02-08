@@ -35,6 +35,9 @@ namespace megan_mayle
         {
             // Add framework services.
             services.AddApplicationInsightsTelemetry(Configuration);
+            services.AddSession(options => {
+                options.IdleTimeout = TimeSpan.FromMinutes(30);
+            });
 
             services.AddMvc();
         }
@@ -60,7 +63,7 @@ namespace megan_mayle
             app.UseApplicationInsightsExceptionTelemetry();
 
             app.UseStaticFiles();
-
+            app.UseSession();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(

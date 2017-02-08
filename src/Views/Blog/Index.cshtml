@@ -1,29 +1,32 @@
 @model IList<megan_mayle.ViewModels.PostDisplay>
-<div class="blog">
+<div class="content">
     <section>
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
+                    <h2 class="content-header">Megan's Blog</h2>
                     <div class="post-content">
                         <div class="post-container">
                             @foreach (var item in Model)
                             {
                                 <article>
                                     <h2>
-                                        <a class="section-sub-heading" href="/blog/post/@item.PostSlug">@item.PostTitle</a>
+                                        <a class="section-sub-heading" href="/blog/post/@item.Slug">@item.Title</a>
                                     </h2>
                                     <div class="light-gray">
-                                        <span class="author_name">@item.PostDatePosted.ToString("MMM dd, yyyy")</span>
+                                        <span class="author_name">@item.DatePosted.ToString("MMM dd, yyyy")</span>
                                         <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-                                        <span class="author_name">@item.AuthorName</span>
+                                        <span class="author_name">Megan Mayle</span>
                                     </div>
-                                    @if (!string.IsNullOrEmpty(item.PostExcerpt))
+                                    @if (!string.IsNullOrEmpty(item.Excerpt))
                                     {
-                                        <p>@item.PostExcerpt<a class="text-muted"  href="/blog/post/@item.PostSlug">See more...</a></p>
+                                        <p>@item.Excerpt<a class="text-muted" href="/blog/post/@item.Slug">See more...</a>
+                                        </p>
                                     }
                                     else
                                     {
-                                        <p>@item.Markdown<a class="text-muted"  href="/blog/post/@item.PostSlug">See more...</a></p>
+                                        <p>@item.Markdown<a class="text-muted" href="/blog/post/@item.Slug">See more...</a>
+                                        </p>
                                     }
                                 </article>
                             }
