@@ -5,6 +5,7 @@
 /// <reference path="js/classie.js" />
 /// <reference path="js/creative.js" />
 /// <reference path="js/jquery.easing.min.js" />
+/// <reference path="js/jquery.fittext.js" />
 /// <reference path="js/jquery.js" />
 /// <reference path="js/moment.js" />
 /// <reference path="js/site.min.js" />

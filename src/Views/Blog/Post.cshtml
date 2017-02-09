@@ -8,24 +8,33 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8">
-                    <article>
-                        <h2>@Model.Title</h2>
-                        <div class="dark-gray">
-                            <span class="author_name">
-                                @Model.DatePosted.ToString("MMM dd, yyyy")
-                            </span>
-                            <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-                            <span class="author_name">
-                                Megan Mayle
-                            </span>
-                        </div>
-                        @if (!string.IsNullOrEmpty(@Model.ImageUrl))
-                        {
-                            <img src="@Model.ImageUrl" class="width-50"/>
-                        }
-                        <p>@Html.Raw(Model.Markdown)</p>
-                    </article>
-                <div id="disqus_thread"></div>
+                <article>
+                    <h2>@Model.Title</h2>
+                    <div class="dark-gray">
+                        <span class="author_name">
+                            @Model.DatePosted.ToString("MMM dd, yyyy")
+                        </span>
+                        <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                        <span class="author_name">
+                            Megan Mayle
+                        </span>
+                    </div>
+                    @if (!string.IsNullOrEmpty(@Model.ImageUrl))
+                    {
+                        <img src="@Model.ImageUrl" class="width-50"/>
+                    }
+                    <p>@Html.Raw(Model.Markdown)</p>
+                </article>
+                <div class="share">
+                    <h4>Share this</h4>
+                    <a href="https://twitter.com/share" class="twitter-share-button" data-show-count="false">Tweet</a>
+                    <div id="fb-root"></div>
+                    <div class="fb-share-button" data-href="http://www.meganmayle.com/blog/post/@Model.Slug" data-layout="button" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.meganmayle.com%2Fblog%2Fpost%2F@Model.Slug&amp;src=sdkpreparse">Share</a></div>
+                </div>
+                <div class="share margin-bottom-30">
+                    <h4>Leave a comment</h4>
+                    <div id="disqus_thread"></div>
+                </div>
             </div>
         </div>
     </div>
@@ -33,14 +42,24 @@
 
 <script>
     var disqus_config = function () {
-        this.page.url = 'http://teamvirtuoso.com/blog/@Model.Slug';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.url = 'http://meganmayle.com/blog/@Model.Slug';  // Replace PAGE_URL with your page's canonical URL variable
         this.page.identifier = '@Model.Slug'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
     (function () { // DON'T EDIT BELOW THIS LINE
         var d = document, s = d.createElement('script');
-        s.src = '//teamvirtuoso.disqus.com/embed.js';
+        s.src = '//meganmayle.disqus.com/embed.js';
         s.setAttribute('data-timestamp', +new Date());
         (d.head || d.body).appendChild(s);
     })();
 </script>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
