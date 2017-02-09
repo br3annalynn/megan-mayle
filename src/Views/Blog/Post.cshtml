@@ -8,29 +8,23 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8">
-                <article class="post">
-                    <div class="post-content">
-                        <div class="page-container">
-                            <article>
-                                @if (!string.IsNullOrEmpty(@Model.ImageUrl))
-                                {
-                                    <img src="@Model.ImageUrl" width="300"/>
-                                }
-                                <h2>@Model.Title</h2>
-                                <div class="dark-gray">
-                                    <span class="author_name">
-                                        @Model.DatePosted.ToString("MMM dd, yyyy")
-                                    </span>
-                                    <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-                                    <span class="author_name">
-                                        Megan Mayle
-                                    </span>
-                                </div>
-                                <p>@Html.Raw(Model.Markdown)</p>
-                            </article>
+                    <article>
+                        <h2>@Model.Title</h2>
+                        <div class="dark-gray">
+                            <span class="author_name">
+                                @Model.DatePosted.ToString("MMM dd, yyyy")
+                            </span>
+                            <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                            <span class="author_name">
+                                Megan Mayle
+                            </span>
                         </div>
-                    </div>
-                </article>
+                        @if (!string.IsNullOrEmpty(@Model.ImageUrl))
+                        {
+                            <img src="@Model.ImageUrl" class="width-50"/>
+                        }
+                        <p>@Html.Raw(Model.Markdown)</p>
+                    </article>
                 <div id="disqus_thread"></div>
             </div>
         </div>

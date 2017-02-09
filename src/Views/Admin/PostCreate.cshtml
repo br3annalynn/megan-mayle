@@ -5,52 +5,50 @@
     Layout = "_LayoutAdmin";
 }
 <div class="container content-admin">
-
-    @using (Html.BeginForm("PostCreate", "Admin", FormMethod.Post, new { role = "form" }))
-    {
-        <div class="form-group">
-            <label for="Title">Title</label>
-            <input type="text" class="form-control" id="Title" name="Title" value="">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            @using (Html.BeginForm("PostCreate", "Admin", FormMethod.Post, new { role = "form" }))
+            {
+                <div class="form-group">
+                    <label for="Title">Title</label>
+                    <input type="text" class="form-control" id="Title" name="Title" value="">
+                </div>
+                <div class="form-group">
+                    <label for="Body">Body</label>
+                    <textarea class="form-control" id="Body" name="Body" rows="10"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="Excerpt">Excerpt</label>
+                    <textarea class="form-control" id="Excerpt" name="Excerpt" rows="10"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="ImageUrl">ImageUrl</label>
+                    <input type="text" class="form-control" id="ImageUrl" name="ImageUrl" value="">
+                </div>
+                <div class="form-group">
+                    <label for="Slug">Slug</label>
+                    <input type="text" class="form-control" id="Slug" name="Slug" value="">
+                </div>
+                <div class="form-group">
+                    <label for="Date">Publish Date</label>
+                    <div class='input-group date' id='datetimepicker1'>
+                        <input type='text' class="form-control" name="DatePosted" id="DatePosted" value="" />
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group text-right">
+                    <button type="submit" class="btn btn-success">Save</button>
+                </div>
+            }
         </div>
-        <div class="form-group">
-            <label for="Body">Body</label>
-            <textarea class="form-control" id="Body" name="Body" rows="10"></textarea>
-        </div>
-        <div class="form-group">
-            <label for="Excerpt">Excerpt</label>
-            <textarea class="form-control" id="Excerpt" name="Excerpt" rows="10"></textarea>
-        </div>
-        <div class="form-group">
-            <label for="ImageUrl">ImageUrl</label>
-            <input type="text" class="form-control" id="ImageUrl" name="ImageUrl" value="">
-        </div>
-        <div class="form-group">
-            <label for="Slug">Slug</label>
-            <input type="text" class="form-control" id="Slug" name="Slug" value="">
-        </div>
-        <div class="form-group">
-            <label for="Date">Publish Date</label>
-            <div class='input-group date' id='datetimepicker1'>
-                <input type='text' class="form-control" name="DatePosted" id="DatePosted" value="" />
-                <span class="input-group-addon">
-                    <span class="glyphicon glyphicon-calendar"></span>
-                </span>
-            </div>
-        </div>
-        <div class="form-group text-right">
-            <button type="submit" class="btn btn-success">Save</button>
-        </div>
-    }
-
+    </div>
 </div>
 
 @section Scripts
 {
     <script type="text/javascript">
         localStorage.clear();
-
-        $(function() {
-            $('#datetimepicker1').datetimepicker();
-        });
     </script>
 }

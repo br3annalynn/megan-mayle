@@ -13,11 +13,13 @@
     <link rel="stylesheet" href="~/css/site.css" />
     <link rel="stylesheet" href="~/css/utilities.css" />
     <link rel="stylesheet" href="~/css/resets.css" />
+    <link href="/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
 
 </head>
 <body>
 
-<div class="navbar navbar-inverse navbar-admin navbar-fixed-top">
+<div class="navbar navbar-inverse navbar-admin">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -51,7 +53,22 @@
 <script src="/js/moment.js"></script>
 <script src="/js/bootstrap-datetimepicker.min.js"></script>
 <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $('#datetimepicker1').datetimepicker();
+        if ( $( "form #Body" ).length ) {
+            var simplemde = new SimpleMDE({
+                autosave: {
+                    enabled: true,
+                    uniqueId: "tv_editor",
+                    delay: 1000,
+                    element: $("#Body")[0]
+                }
+            });
+        }
 
+    });
+</script>
 @RenderSection("scripts", required: false)
 </body>
 </html>

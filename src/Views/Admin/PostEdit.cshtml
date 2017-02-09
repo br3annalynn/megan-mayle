@@ -4,58 +4,60 @@
     ViewBag.Title = "Edit";
     Layout = "_LayoutAdmin";
 }
-@using (Html.BeginForm("PostEdit", "Admin", FormMethod.Post, new { role = "form" }))
-{
-    <input type="hidden" id="Id" name="Id" value="@Model.Id">
-    
-    <div class="form-group">
-        <label for="Title">Title</label>
-        <input type="text" class="form-control" id="Title" name="Title" value="@Model.Title">
-    </div>
-    <div class="form-group">
-        <label for="Body">Body</label>
-        <textarea class="form-control" id="Body" name="Body" rows="10">
-            @Model.Body
-        </textarea>
-    </div>
-    <div class="form-group">
-        <label for="Excerpt">Excerpt</label>
-        <textarea class="form-control" id="Excerpt" name="Excerpt" rows="10">
-            @Model.Excerpt
-        </textarea>
-    </div>
-    <div class="form-group">
-        <label for="ImageUrl">ImageUrl</label>
-        <input type="text" class="form-control" id="ImageUrl" name="ImageUrl" value="@Model.ImageUrl">
-    </div>
-    <div class="form-group">
-        <label for="Slug">Slug</label>
-        <input type="text" class="form-control" id="Slug" name="Slug" value="@Model.Slug">
-    </div>
-    <div class="form-group">
-        <label for="Date">Publish Date</label>
-        <div class='input-group date' id='datetimepicker1'>
-            <input type='text' class="form-control" name="DatePosted" id="DatePosted" value="@Model.DatePosted" />
-            <span class="input-group-addon">
-                <span class="glyphicon glyphicon-calendar"></span>
-            </span>
-        </div>
-    </div>
 
-    <div class="form-group text-right">
-        @Html.ActionLink("Delete", "PostDelete", new {id=@Model.Id}, new {@class="btn btn-danger"})
-        <button type="submit" class="btn btn-success">Save</button>
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+        @using (Html.BeginForm("PostEdit", "Admin", FormMethod.Post, new { role = "form" }))
+        {
+            <input type="hidden" id="Id" name="Id" value="@Model.Id">
+
+            <div class="form-group">
+                <label for="Title">Title</label>
+                <input type="text" class="form-control" id="Title" name="Title" value="@Model.Title">
+            </div>
+            <div class="form-group">
+                <label for="Body">Body</label>
+                <textarea class="form-control" id="Body" name="Body" rows="10">
+                    @Model.Body
+                </textarea>
+            </div>
+            <div class="form-group">
+                <label for="Excerpt">Excerpt</label>
+                <textarea class="form-control" id="Excerpt" name="Excerpt" rows="10">
+                    @Model.Excerpt
+                </textarea>
+            </div>
+            <div class="form-group">
+                <label for="ImageUrl">ImageUrl</label>
+                <input type="text" class="form-control" id="ImageUrl" name="ImageUrl" value="@Model.ImageUrl">
+            </div>
+            <div class="form-group">
+                <label for="Slug">Slug</label>
+                <input type="text" class="form-control" id="Slug" name="Slug" value="@Model.Slug">
+            </div>
+            <div class="form-group">
+                <label for="Date">Publish Date</label>
+                <div class='input-group date' id='datetimepicker1'>
+                    <input type='text' class="form-control" name="DatePosted" id="DatePosted" value="@Model.DatePosted" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+
+            <div class="form-group text-right">
+                @Html.ActionLink("Delete", "PostDelete", new { id = @Model.Id }, new { @class = "btn btn-danger" })
+                <button type="submit" class="btn btn-success">Save</button>
+            </div>
+        }
     </div>
-}
+</div>
+
 
 @section Scripts
 {
     <script type="text/javascript">
         localStorage.clear();
-
-        $(function() {
-            $('#datetimepicker1').datetimepicker();
-        });
     </script>
 }
 
