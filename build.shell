@@ -4,10 +4,10 @@ node {
       git credentialsId: '3d50b0d8-7a79-460f-8fab-29cdde5a8710', url: 'git@github.com:br3annalynn/megan-mayle.git'
       sh "sudo supervisorctl stop megan"
       sh "dotnet --info"
-      sh "sudo dotnet restore src/megan-mayle.csproj"
-      sh "dotnet build src/src/megan-mayle.csproj"
+      sh "sudo dotnet restore src/src.csproj"
+      sh "dotnet build src/src/src.csproj"
       sh "sudo supervisorctl stop megan"
-      sh "sudo dotnet publish src/megan-mayle.csproj -r ubuntu.16.04-x64 -c Release -o /var/www/megan/"
+      sh "sudo dotnet publish src/src.csproj -r ubuntu.16.04-x64 -c Release -o /var/www/megan/"
       sh "sudo supervisorctl start megan"
   }
 }
