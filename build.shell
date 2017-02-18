@@ -5,7 +5,7 @@ node {
       sh "sudo supervisorctl stop megan"
       sh "dotnet --info"
       sh "sudo dotnet restore src/src.csproj"
-      sh "dotnet build src/src.csproj"
+      sh "sudo dotnet build src/src.csproj"
       sh "sudo supervisorctl stop megan"
       sh "sudo dotnet publish src/src.csproj -r ubuntu.16.04-x64 -c Release -o /var/www/megan/"
       sh "sudo supervisorctl start megan"
