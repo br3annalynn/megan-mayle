@@ -16,6 +16,7 @@ namespace megan_mayle
                 .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseIISIntegration()
                 .UseStartup<Startup>()
+                 .UseUrls("http://localhost:2024")
                 .Build();
 
             host.Run();
