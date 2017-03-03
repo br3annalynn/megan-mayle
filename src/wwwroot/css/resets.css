@@ -3,25 +3,28 @@
     font-size: 14px;
     font-weight: 200;
     color: #4A4A4A;
-    padding-bottom: 60px;
+    padding-bottom: 80px;
 }
+
 
 footer {
     background-color: #5C3584;
     color: white;
     font-size: 14px;
     position: fixed;
+    margin: 0;
+    margin-top: 60px;
     bottom: 0;
     width: 101%;
-    margin: 0;
     padding: 20px 0 20px 23%;
     z-index: 2;
 }
 
 .navbar-inverse {
-    background-color: #128D93;
     border: none;
     padding-left: 23%;
+    background-image: url("../images/header.png");
+    background-size: 100%;
 }
 
 .navbar-inverse.navbar-admin {
@@ -73,4 +76,12 @@ footer {
 .btn-success:hover {
     background-color: #e1aeeb;
     border-color: #5C3584;
+}
+
+.navbar-collapse {
+    padding-left: 0;
+}
+
+ul {
+    list-style-type: circle;
 }

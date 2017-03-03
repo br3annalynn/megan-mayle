@@ -4,6 +4,11 @@
     padding-right: 15px;
 }
 
+.body-content .header {
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
 .contact-bar {
     position: fixed;
     width: 20%;
@@ -23,7 +28,6 @@
 .header {
     color: #128D93;
     font-size: 16px;
-    text-transform: uppercase;
 }
 
 .navbar-header .header {
@@ -38,8 +42,9 @@
 .contact-bar .header {
     color: #020202;
     font-size: 14px;
-    margin-top: 20px;
+    font-weight: 500;
 }
+
 
 .contact-bar .icon {
     float: left;
@@ -54,6 +59,8 @@
 
 .body-content .content {
     margin-left: 23%;
+    margin-top: 30px;
+    font-size: 18px;
 }
 
 .body-content.content-admin {
@@ -66,10 +73,10 @@
     text-transform: uppercase;
     color: #5c3584;
     margin-bottom: 0;
+    font-size: 40px;
 }
 
 .content-sub-header {
-    text-align: center;
     color: #020202;
     margin-top: 0;
 }
@@ -85,3 +92,6 @@
     margin-right: 10px;
 }
 
+.justify {
+    text-align: justify;
+}

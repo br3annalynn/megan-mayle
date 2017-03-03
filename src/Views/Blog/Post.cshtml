@@ -11,13 +11,9 @@
                 <article>
                     <h2>@Model.Title</h2>
                     <div class="dark-gray">
-                        <span class="author_name">
-                            @Model.DatePosted.ToString("MMM dd, yyyy")
-                        </span>
+                        <span class="author_name">Megan Mayle</span>
                         <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-                        <span class="author_name">
-                            Megan Mayle
-                        </span>
+                        <span class="author_name">@Model.DatePosted.ToString("MMM dd, yyyy")</span>
                     </div>
                     @if (!string.IsNullOrEmpty(@Model.ImageUrl))
                     {
@@ -40,6 +36,19 @@
     </div>
 </div>
 
+
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<script>
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+
 <script>
     var disqus_config = function () {
         this.page.url = 'http://meganmayle.com/blog/@Model.Slug';  // Replace PAGE_URL with your page's canonical URL variable
@@ -52,14 +61,4 @@
         (d.head || d.body).appendChild(s);
     })();
 </script>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-<script>
-(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
